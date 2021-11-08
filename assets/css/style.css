@@ -125,6 +125,7 @@ svg.background__svg {
   display: grid;
 }
 .container .content__inner .item {
+  display: grid;
   background: #ffffff;
 }
 .container .content__inner.rows {
@@ -155,9 +156,9 @@ svg.background__svg {
   grid-template-areas: "title title" "likes comments";
   grid-gap: 5px;
 }
-.container .content__inner.rows .data .today span .title,
-.container .content__inner.rows .data .last span .title,
-.container .content__inner.rows .data .info span .title {
+.container .content__inner.rows .data .today span.title,
+.container .content__inner.rows .data .last span.title,
+.container .content__inner.rows .data .info span.title {
   grid-area: title;
 }
 .container .content__inner.rows .data .today .icons.likes,

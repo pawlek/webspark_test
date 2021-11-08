@@ -140,6 +140,7 @@ svg.background__svg {
             display: grid;
 
             .item {
+                display: grid;
                 background: #ffffff;
             }
 
@@ -177,7 +178,7 @@ svg.background__svg {
                         grid-gap: 5px;
 
                         span {
-                            .title {
+                            &.title {
                                 grid-area: title;
                             }
                         }
