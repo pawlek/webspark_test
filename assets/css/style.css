@@ -161,15 +161,11 @@ svg.background__svg {
 .container .content__inner.rows .data .info span.title {
   grid-area: title;
 }
-.container .content__inner.rows .data .today .icons.likes,
-.container .content__inner.rows .data .last .icons.likes,
-.container .content__inner.rows .data .info .icons.likes {
-  grid-area: likes;
-}
-.container .content__inner.rows .data .today .icons.comments,
-.container .content__inner.rows .data .last .icons.comments,
-.container .content__inner.rows .data .info .icons.comments {
-  grid-area: comments;
+.container .content__inner.rows .data .today .icons,
+.container .content__inner.rows .data .last .icons,
+.container .content__inner.rows .data .info .icons {
+  display: flex;
+  grid-gap: 20px;
 }
 .container .content__inner.tiles {
   grid-template-columns: repeat(4, 1fr);
@@ -179,4 +175,6 @@ svg.background__svg {
 .container .content .load-more {
   border: 1px solid #929292;
   border-radius: 14px;
+  width: 110px;
+  text-transform: uppercase;
 }

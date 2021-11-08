@@ -184,12 +184,8 @@ svg.background__svg {
                         }
 
                         .icons {
-                            &.likes {
-                                grid-area: likes;
-                            }
-                            &.comments {
-                                grid-area: comments;
-                            }
+                            display: flex;
+                            grid-gap: 20px;
                         }
                     }
                 }
@@ -203,6 +199,8 @@ svg.background__svg {
         .load-more {
             border: 1px solid #929292;
             border-radius: 14px;
+            width: 110px;
+            text-transform: uppercase;
         }
     }
 }
