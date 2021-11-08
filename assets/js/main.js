@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    var width = $( window ).width();
+
+    if(width <= 1100){
+        $('[data-filter="rows"]').addClass('active');
+        $('[data-filter="tiles"]').hide();
+
+        $('[data-view]').attr('data-view', 'rows');
+    }
+
     $('[data-clear]').on('click', function(){
         var clear_input = $(this).attr('data-clear');
 

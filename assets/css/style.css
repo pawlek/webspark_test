@@ -110,6 +110,7 @@ svg.background__svg {
   position: relative;
   z-index: 10;
   justify-self: center;
+  overflow: hidden;
 }
 .container .content .filter {
   justify-content: flex-end;
@@ -125,6 +126,8 @@ svg.background__svg {
 }
 .container .content__inner {
   display: grid;
+  overflow-y: auto;
+  height: 100%;
 }
 .container .content__inner .item {
   display: grid;
@@ -179,8 +182,8 @@ svg.background__svg {
   grid-template-rows: 200px 140px;
 }
 .container .content__inner[data-view=tiles] .item .img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 .container .content__inner[data-view=tiles] .item .img img {
   width: 100%;
@@ -195,6 +198,11 @@ svg.background__svg {
   padding: 0 10px;
   grid-template-areas: "today last" "info info";
 }
+.container .content__inner[data-view=tiles] .item .data .today,
+.container .content__inner[data-view=tiles] .item .data .last {
+  display: grid;
+  grid-gap: 10px;
+}
 .container .content__inner[data-view=tiles] .item .data .today .icons,
 .container .content__inner[data-view=tiles] .item .data .last .icons {
   display: grid;
@@ -208,7 +216,7 @@ svg.background__svg {
 }
 .container .content__inner[data-view=tiles] .item .data .info {
   grid-area: info;
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   justify-content: space-between;
 }
