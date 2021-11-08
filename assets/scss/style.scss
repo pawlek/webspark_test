@@ -45,18 +45,38 @@ svg.background__svg {
             position: relative;
             justify-self: end;
         }
-        .title {
+        &__inner {
             display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
+            grid-row-gap: 14px;
 
-            .btn {
-                border: 1px solid;
-                padding: 10px;
-                display: block;
-                text-align: center;
-                width: 100%;
+            .title {
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+
+                .btn {
+                    border: 1px solid;
+                    padding: 10px;
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+            .statistic {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                span {
+                    font-weight: bold;
+                }
+            }
+            .datepicker {
+                input {
+                    width: 80%;
+                    height: 30px;
+                    border-radius: 10px;
+                }
             }
         }
     }

@@ -41,16 +41,32 @@ svg.background__svg {
   position: relative;
   justify-self: end;
 }
-.container .header .title {
+.container .header__inner {
+  display: grid;
+  grid-row-gap: 14px;
+}
+.container .header__inner .title {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-.container .header .title .btn {
+.container .header__inner .title .btn {
   border: 1px solid;
   padding: 10px;
   display: block;
   text-align: center;
   width: 100%;
+}
+.container .header__inner .statistic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container .header__inner .statistic span {
+  font-weight: bold;
+}
+.container .header__inner .datepicker input {
+  width: 80%;
+  height: 30px;
+  border-radius: 10px;
 }
