@@ -1,0 +1,1 @@
+$(document).ready((function(){for(var n=0;n<=10;n++){var a=`rgb(${parseInt(256*Math.random())},${parseInt(256*Math.random())},${parseInt(256*Math.random())})`;$(".item").css({background:a}).appendTo("content__inner")}}));
