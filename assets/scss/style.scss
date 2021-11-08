@@ -72,10 +72,36 @@ svg.background__svg {
                 }
             }
             .datepicker {
-                input {
-                    width: 80%;
-                    height: 30px;
-                    border-radius: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+
+                .input-block {
+                    display: grid;
+                    position: relative;
+                    align-items: center;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    border: 1px solid #dedede;
+
+                    input {
+                        height: 30px;
+                        border: none;
+                        padding: 10px;
+                    }
+                    .input__btn {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 10px;
+                        position: relative;
+                        align-items: center;
+                        position: absolute;
+                        right: 0px;
+                        height: 100%;
+                        background: #dedede;
+                        padding: 0 10px;
+                        color: #5f5f5f;
+                    }
                 }
             }
         }
