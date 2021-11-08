@@ -9,7 +9,7 @@
 }
 svg.background__svg {
     position: absolute;
-    /*     z-index: 999; */
+    z-index: 9;
     top: 0px;
     left: 0px;
 }
@@ -38,6 +38,11 @@ svg.background__svg {
     .header {
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 100px;
+        position: relative;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.67);
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12),
+            inset 0px 12px 24px rgba(0, 0, 0, 0.12);
 
         .logo {
             height: 140px;

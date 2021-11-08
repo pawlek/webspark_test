@@ -8,7 +8,7 @@
 
 svg.background__svg {
   position: absolute;
-  /*     z-index: 999; */
+  z-index: 9;
   top: 0px;
   left: 0px;
 }
@@ -34,6 +34,10 @@ svg.background__svg {
 .container .header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 100px;
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.67);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12), inset 0px 12px 24px rgba(0, 0, 0, 0.12);
 }
 .container .header .logo {
   height: 140px;
@@ -65,8 +69,34 @@ svg.background__svg {
 .container .header__inner .statistic span {
   font-weight: bold;
 }
-.container .header__inner .datepicker input {
-  width: 80%;
+.container .header__inner .datepicker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.container .header__inner .datepicker .input-block {
+  display: grid;
+  position: relative;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dedede;
+}
+.container .header__inner .datepicker .input-block input {
   height: 30px;
-  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+.container .header__inner .datepicker .input-block .input__btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  position: relative;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  background: #dedede;
+  padding: 0 10px;
+  color: #5f5f5f;
 }
