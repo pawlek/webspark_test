@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
+  transition: all 0.3s;
 }
 
 svg.background__svg {
@@ -144,28 +145,28 @@ svg.background__svg {
   width: 100%;
   height: 100%;
 }
-.container .content__inner[data-view=rows] .data {
+.container .content__inner[data-view=rows] .item .data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   padding: 0 20px;
 }
-.container .content__inner[data-view=rows] .data .today,
-.container .content__inner[data-view=rows] .data .last,
-.container .content__inner[data-view=rows] .data .info {
+.container .content__inner[data-view=rows] .item .data .today,
+.container .content__inner[data-view=rows] .item .data .last,
+.container .content__inner[data-view=rows] .item .data .info {
   display: grid;
   grid-template-areas: "title title" "likes comments";
   grid-gap: 5px;
 }
-.container .content__inner[data-view=rows] .data .today span.title,
-.container .content__inner[data-view=rows] .data .last span.title,
-.container .content__inner[data-view=rows] .data .info span.title {
+.container .content__inner[data-view=rows] .item .data .today span.title,
+.container .content__inner[data-view=rows] .item .data .last span.title,
+.container .content__inner[data-view=rows] .item .data .info span.title {
   grid-area: title;
 }
-.container .content__inner[data-view=rows] .data .today .icons,
-.container .content__inner[data-view=rows] .data .last .icons,
-.container .content__inner[data-view=rows] .data .info .icons {
+.container .content__inner[data-view=rows] .item .data .today .icons,
+.container .content__inner[data-view=rows] .item .data .last .icons,
+.container .content__inner[data-view=rows] .item .data .info .icons {
   display: flex;
   grid-gap: 10px;
 }
@@ -173,6 +174,24 @@ svg.background__svg {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
+}
+.container .content__inner[data-view=tiles] .item {
+  grid-template-rows: 200px 140px;
+}
+.container .content__inner[data-view=tiles] .item .img {
+  width: 200px;
+  height: 200px;
+}
+.container .content__inner[data-view=tiles] .item .img img {
+  width: 100%;
+  height: 100%;
+}
+.container .content__inner[data-view=tiles] .item .data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80% 20%;
+  justify-content: center;
+  align-items: center;
 }
 .container .content .load-more {
   border: 1px solid #929292;
