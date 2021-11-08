@@ -21,6 +21,19 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/img\/1-unsplash.jpg" : {
+      "ft" : 16384,
+      "iS" : 4019037,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/img\/1-unsplash.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/js\/main-min.js" : {
       "bF" : 0,
       "ft" : 64,

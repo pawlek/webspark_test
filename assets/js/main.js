@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('[data-clear]').on('click', function(){
         var clear_input = $(this).attr('data-clear');
 
-        $('#' + clear_input).val('');
+        $('#' + clear_input + ' input').val('');
 
         console.log(clear_input + ' is clear');
     });
