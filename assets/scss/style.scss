@@ -90,9 +90,10 @@ svg.background__svg {
                     border: 1px solid #dedede;
 
                     input {
-                        height: 30px;
+                        height: 100%;
                         border: none;
                         padding: 10px;
+                        outline: none;
                     }
                     .input__btn {
                         display: grid;

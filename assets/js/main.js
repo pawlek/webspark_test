@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    $('[data-clear]').on('click', function(){
+        var clear_input = $(this).attr('data-clear');
+
+        $('#' + clear_input).val('');
+
+        console.log(clear_input + ' is clear');
+    });
+
     for (var i = 0; i <= 10; i++){
         // These variables need to be different for each iteration:
         var r = parseInt(Math.random()*256);
@@ -9,5 +17,7 @@ $(document).ready(function(){
         
         $('.item').css({"background": color}).appendTo("content__inner");
     }
+
+
   
 });

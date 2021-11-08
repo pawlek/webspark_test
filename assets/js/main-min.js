@@ -1,1 +1,1 @@
-$(document).ready((function(){for(var n=0;n<=10;n++){var a=`rgb(${parseInt(256*Math.random())},${parseInt(256*Math.random())},${parseInt(256*Math.random())})`;$(".item").css({background:a}).appendTo("content__inner")}}));
+$(document).ready((function(){$("[data-clear]").on("click",(function(){var a=$(this).attr("data-clear");$("#"+a).val(""),console.log(a+" is clear")}));for(var a=0;a<=10;a++){var n=`rgb(${parseInt(256*Math.random())},${parseInt(256*Math.random())},${parseInt(256*Math.random())})`;$(".item").css({background:n}).appendTo("content__inner")}}));
