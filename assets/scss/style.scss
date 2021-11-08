@@ -24,9 +24,9 @@ svg.background__svg {
 
     width: 100vw;
     height: 100vh;
-}
 
-.container {
+    background: #e5e5e5;
+
     > div {
         height: 100%;
         width: 100%;
@@ -139,12 +139,16 @@ svg.background__svg {
         &__inner {
             display: grid;
 
+            .item {
+                background: #ffffff;
+            }
+
             &.rows {
-                grid-template-columns: 86px auto;
+                grid-template-columns: 1fr;
 
                 .item {
+                    grid-template-columns: 86px auto;
                     height: 86px;
-                    background: #ffffff;
 
                     .img {
                         width: 86px;
@@ -156,9 +160,37 @@ svg.background__svg {
                         }
                     }
                 }
+
                 .data {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
+                    justify-content: center;
+                    align-items: center;
+
+                    .today,
+                    .last,
+                    .info {
+                        display: grid;
+                        grid-template-areas:
+                            "title title"
+                            "likes comments";
+                        grid-gap: 5px;
+
+                        span {
+                            .title {
+                                grid-area: title;
+                            }
+                        }
+
+                        .icons {
+                            &.likes {
+                                grid-area: likes;
+                            }
+                            &.comments {
+                                grid-area: comments;
+                            }
+                        }
+                    }
                 }
             }
             &.tiles {

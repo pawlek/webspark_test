@@ -22,8 +22,8 @@ svg.background__svg {
   grid-template-areas: "header" "content";
   width: 100vw;
   height: 100vh;
+  background: #e5e5e5;
 }
-
 .container > div {
   height: 100%;
   width: 100%;
@@ -124,12 +124,15 @@ svg.background__svg {
 .container .content__inner {
   display: grid;
 }
+.container .content__inner .item {
+  background: #ffffff;
+}
 .container .content__inner.rows {
-  grid-template-columns: 86px auto;
+  grid-template-columns: 1fr;
 }
 .container .content__inner.rows .item {
+  grid-template-columns: 86px auto;
   height: 86px;
-  background: #ffffff;
 }
 .container .content__inner.rows .item .img {
   width: 86px;
@@ -142,6 +145,30 @@ svg.background__svg {
 .container .content__inner.rows .data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.container .content__inner.rows .data .today,
+.container .content__inner.rows .data .last,
+.container .content__inner.rows .data .info {
+  display: grid;
+  grid-template-areas: "title title" "likes comments";
+  grid-gap: 5px;
+}
+.container .content__inner.rows .data .today span .title,
+.container .content__inner.rows .data .last span .title,
+.container .content__inner.rows .data .info span .title {
+  grid-area: title;
+}
+.container .content__inner.rows .data .today .icons.likes,
+.container .content__inner.rows .data .last .icons.likes,
+.container .content__inner.rows .data .info .icons.likes {
+  grid-area: likes;
+}
+.container .content__inner.rows .data .today .icons.comments,
+.container .content__inner.rows .data .last .icons.comments,
+.container .content__inner.rows .data .info .icons.comments {
+  grid-area: comments;
 }
 .container .content__inner.tiles {
   grid-template-columns: repeat(4, 1fr);
