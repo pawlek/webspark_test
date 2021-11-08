@@ -66,6 +66,7 @@ svg.background__svg {
 .container .header__inner .statistic {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 .container .header__inner .statistic span {
   font-weight: bold;
@@ -128,46 +129,47 @@ svg.background__svg {
   display: grid;
   background: #ffffff;
 }
-.container .content__inner.rows {
+.container .content__inner[data-view=rows] {
   grid-template-columns: 1fr;
 }
-.container .content__inner.rows .item {
+.container .content__inner[data-view=rows] .item {
   grid-template-columns: 86px auto;
   height: 86px;
 }
-.container .content__inner.rows .item .img {
+.container .content__inner[data-view=rows] .item .img {
   width: 86px;
   height: 86px;
 }
-.container .content__inner.rows .item .img img {
+.container .content__inner[data-view=rows] .item .img img {
   width: 100%;
   height: 100%;
 }
-.container .content__inner.rows .data {
+.container .content__inner[data-view=rows] .data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
-.container .content__inner.rows .data .today,
-.container .content__inner.rows .data .last,
-.container .content__inner.rows .data .info {
+.container .content__inner[data-view=rows] .data .today,
+.container .content__inner[data-view=rows] .data .last,
+.container .content__inner[data-view=rows] .data .info {
   display: grid;
   grid-template-areas: "title title" "likes comments";
   grid-gap: 5px;
 }
-.container .content__inner.rows .data .today span.title,
-.container .content__inner.rows .data .last span.title,
-.container .content__inner.rows .data .info span.title {
+.container .content__inner[data-view=rows] .data .today span.title,
+.container .content__inner[data-view=rows] .data .last span.title,
+.container .content__inner[data-view=rows] .data .info span.title {
   grid-area: title;
 }
-.container .content__inner.rows .data .today .icons,
-.container .content__inner.rows .data .last .icons,
-.container .content__inner.rows .data .info .icons {
+.container .content__inner[data-view=rows] .data .today .icons,
+.container .content__inner[data-view=rows] .data .last .icons,
+.container .content__inner[data-view=rows] .data .info .icons {
   display: flex;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
-.container .content__inner.tiles {
+.container .content__inner[data-view=tiles] {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
@@ -177,4 +179,5 @@ svg.background__svg {
   border-radius: 14px;
   width: 110px;
   text-transform: uppercase;
+  padding: 10px;
 }

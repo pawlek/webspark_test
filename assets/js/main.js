@@ -7,6 +7,15 @@ $(document).ready(function(){
 
         console.log(clear_input + ' is clear');
     });
+    $('[data-filter]').on('click', function(){
+
+        var table_view = $(this).attr('data-filter');
+
+        $('[data-view]').attr('data-view', table_view);
+
+        console.log('click ' + table_view);
+        console.log('set ' + $('[data-view]').attr('data-view'));
+    });
 
     for (var i = 0; i <= 10; i++){
         // These variables need to be different for each iteration:

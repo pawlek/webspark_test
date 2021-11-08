@@ -73,6 +73,7 @@ svg.background__svg {
             .statistic {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
 
                 span {
                     font-weight: bold;
@@ -144,7 +145,7 @@ svg.background__svg {
                 background: #ffffff;
             }
 
-            &.rows {
+            &[data-view="rows"] {
                 grid-template-columns: 1fr;
 
                 .item {
@@ -167,6 +168,7 @@ svg.background__svg {
                     grid-template-columns: repeat(3, 1fr);
                     justify-content: center;
                     align-items: center;
+                    padding: 0 20px;
 
                     .today,
                     .last,
@@ -185,12 +187,12 @@ svg.background__svg {
 
                         .icons {
                             display: flex;
-                            grid-gap: 20px;
+                            grid-gap: 10px;
                         }
                     }
                 }
             }
-            &.tiles {
+            &[data-view="tiles"] {
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: 1fr 1fr;
                 grid-gap: 10px;
@@ -201,6 +203,7 @@ svg.background__svg {
             border-radius: 14px;
             width: 110px;
             text-transform: uppercase;
+            padding: 10px;
         }
     }
 }
