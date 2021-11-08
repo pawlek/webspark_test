@@ -9,12 +9,13 @@ $(document).ready(function(){
     });
     $('[data-filter]').on('click', function(){
 
+        $('[data-filter]').not(this).removeClass('active');
+        $(this).addClass('active');
+
         var table_view = $(this).attr('data-filter');
 
         $('[data-view]').attr('data-view', table_view);
 
-        console.log('click ' + table_view);
-        console.log('set ' + $('[data-view]').attr('data-view'));
     });
 
     for (var i = 0; i <= 10; i++){
