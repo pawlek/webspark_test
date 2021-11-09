@@ -13,10 +13,10 @@ $(document).ready(function(){
     });
 
     $('[data-datepicker]').on('click', function(){
-      var datepicker = $(this).attr('data-datepicker');
+      var datepicker = '#' + $(this).attr('data-datepicker');
       console.log(datepicker);
 
-      rome('#' + datepicker, { 
+      rome(datepicker, { 
         min: '2021-11-05', 
         max: '2021-11-25' 
       });
@@ -26,10 +26,9 @@ $(document).ready(function(){
     $('[data-clear]').on('click', function(){
         var clear_input = $(this).attr('data-clear');
 
-        $('#' + clear_input + ' input').val('');
-
-        console.log(clear_input + ' is clear');
+        $('input#' + clear_input).val('');
     });
+
     $('[data-filter]').on('click', function(){
 
         $('[data-filter]').not(this).removeClass('active');
