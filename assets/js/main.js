@@ -2,12 +2,21 @@ $(document).ready(function(){
 
     var width = $( window ).width();
 
-    if(width <= 1100){
-        $('[data-filter="rows"]').addClass('active');
-        $('[data-filter="tiles"]').hide();
+    $(window).on('resize', function() {
+        if ($(this).width() <= 1100) {
 
-        $('[data-view]').attr('data-view', 'rows');
-    }
+            $('[data-filter="rows"]').addClass('active');
+            $('[data-filter="tiles"]').hide();
+
+            $('[data-view]').attr('data-view', 'rows');
+
+          width = $(this).width();
+
+
+          $('.dev').text(width);
+        }
+      });
+
 
     $('[data-clear]').on('click', function(){
         var clear_input = $(this).attr('data-clear');
@@ -27,15 +36,15 @@ $(document).ready(function(){
 
     });
 
-    for (var i = 0; i <= 10; i++){
-        // These variables need to be different for each iteration:
-        var r = parseInt(Math.random()*256);
-        var g = parseInt(Math.random()*256);
-        var b = parseInt(Math.random()*256);
-        var color = `rgb(${r},${g},${b})`;
+    // for (var i = 0; i <= 10; i++){
+    //     // These variables need to be different for each iteration:
+    //     var r = parseInt(Math.random()*256);
+    //     var g = parseInt(Math.random()*256);
+    //     var b = parseInt(Math.random()*256);
+    //     var color = `rgb(${r},${g},${b})`;
         
-        $('.item').css({"background": color}).appendTo("content__inner");
-    }
+    //     $('.item').css({"background": color}).appendTo("content__inner");
+    // }
 
 
   
