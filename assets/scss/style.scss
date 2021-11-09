@@ -119,6 +119,7 @@ svg.background__svg {
     .content {
         width: 56vw;
         grid-template-rows: 49px auto 50px;
+        grid-gap: 16px;
         position: relative;
         z-index: 10;
         justify-self: center;
@@ -151,6 +152,7 @@ svg.background__svg {
 
             &[data-view="rows"] {
                 grid-template-columns: 1fr;
+                grid-gap: 8px;
 
                 .item {
                     grid-template-columns: 86px auto;
@@ -198,7 +200,7 @@ svg.background__svg {
             &[data-view="tiles"] {
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: 1fr 1fr;
-                grid-gap: 10px;
+                grid-gap: 8px;
 
                 .item {
                     grid-template-rows: 200px 140px;
@@ -253,9 +255,9 @@ svg.background__svg {
         .load-more {
             border: 1px solid #929292;
             border-radius: 14px;
-            width: 110px;
             text-transform: uppercase;
             padding: 10px;
+            justify-self: center;
         }
     }
 }
