@@ -40,11 +40,11 @@
                     <div class="following"> <span>112</span> following </div>
                 </div>
                 <div class="datepicker">
-                    <div class="input-block" id="from">
-                        <input type="text" name="from-date" placeholder="From" readonly>
+                    <div class="input-block">
+                        <input type="text" name="from-date" placeholder="From" readonly id="from">
                         <div class="input__btn">
-                            <i class="fas fa-times" data-clear="from"></i>
-                            <i class="far fa-calendar-alt"></i>
+                            <i class="fas fa-times" data-datepicker="from"></i>
+                            <i class="far fa-calendar-alt" ></i>
                         </div>
                     </div>
                     <div class="input-block" id="to">
@@ -255,7 +255,7 @@
     </div>
 
     <script src="/components/jquery/jquery-3.6.0.min.js"></script>
-    <!-- <script src="/components/moment/moment.js"></script> -->
+    <script src="/components/rome/rome.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

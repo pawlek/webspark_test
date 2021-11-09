@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    var width = $( window ).width();
-
     $(window).on('resize', function() {
         if ($(this).width() <= 1100) {
 
@@ -12,8 +10,17 @@ $(document).ready(function(){
         } else {
             $('[data-filter="tiles"]').show();
         }
+    });
+
+    $('[data-datepicker]').on('click', function(){
+      var datepicker = $(this).attr('data-datepicker');
+
+      rome(datepicker, { 
+        min: '2021-11-05', 
+        max: '2021-11-25' 
       });
 
+  });
 
     $('[data-clear]').on('click', function(){
         var clear_input = $(this).attr('data-clear');
