@@ -13,8 +13,8 @@ $(document).ready(function(){
     });
 
     rome(from, {
-      initialValue: today,
-      min: today, 
+      initialValue: rome.moment,
+      min: rome.moment, 
       max: '2022-10-30',
       weekStart: 1,
       time: false,
