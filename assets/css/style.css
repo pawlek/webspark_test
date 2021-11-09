@@ -145,7 +145,7 @@
   color: #c8c7c7;
 }
 .container .content .filter .btn:hover {
-  font-size: 22px;
+  color: #00b894;
 }
 .container .content__inner {
   display: grid;
