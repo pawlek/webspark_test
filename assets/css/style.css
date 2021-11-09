@@ -11,11 +11,17 @@
   color: #333;
 }
 
-svg.background__svg {
+svg {
   position: absolute;
   z-index: 9;
+}
+svg__top {
   top: 0px;
   left: 0px;
+}
+svg__bottom {
+  bottom: 0px;
+  right: 0px;
 }
 
 .container {
@@ -65,9 +71,12 @@ svg.background__svg {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+.container .header__inner .title h1 {
+  font-size: 3vw;
+}
 .container .header__inner .title .btn {
   border: 1px solid;
-  padding: 10px;
+  padding: 1vw;
   display: block;
   text-align: center;
   width: 100%;
@@ -76,6 +85,7 @@ svg.background__svg {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
+  font-size: 1.2vw;
 }
 .container .header__inner .statistic span {
   font-weight: bold;

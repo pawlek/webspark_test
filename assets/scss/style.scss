@@ -13,11 +13,17 @@
         color: #333;
     }
 }
-svg.background__svg {
+svg {
     position: absolute;
     z-index: 9;
-    top: 0px;
-    left: 0px;
+    &__top {
+        top: 0px;
+        left: 0px;
+    }
+    &__bottom {
+        bottom: 0px;
+        right: 0px;
+    }
 }
 
 .container {
@@ -72,9 +78,13 @@ svg.background__svg {
                 grid-template-columns: 1fr 1fr;
                 align-items: center;
 
+                h1 {
+                    font-size: 3vw;
+                }
+
                 .btn {
                     border: 1px solid;
-                    padding: 10px;
+                    padding: 1vw;
                     display: block;
                     text-align: center;
                     width: 100%;
@@ -84,6 +94,7 @@ svg.background__svg {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 10px;
+                font-size: 1.2vw;
 
                 span {
                     font-weight: bold;
