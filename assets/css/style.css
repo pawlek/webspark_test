@@ -144,7 +144,7 @@
 .container .content .filter .btn.active {
   color: #c8c7c7;
 }
-.container .content .filter .btn:hover {
+.container .content .filter .btn:hover:not(.active) {
   color: #00b894;
 }
 .container .content__inner {

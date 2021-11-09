@@ -158,7 +158,7 @@
                 &.active {
                     color: #c8c7c7;
                 }
-                &:hover {
+                &:hover:not(.active) {
                     color: #00b894;
                 }
             }
