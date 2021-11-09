@@ -280,3 +280,271 @@ svg.background__svg {
         }
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .rd-container {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-back:hover,
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-next:hover {
+        background: transparent;
+        color: #141414;
+    }
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-back[disabled],
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-next[disabled] {
+        color: transparent;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body:not(.rd-day-selected):hover:before {
+        border: 2px solid #fff;
+        background: #c8c8c8;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-selected {
+        border: 2px solid green;
+        background: none;
+        color: #141414;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-prev-month,
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-next-month {
+        color: #444;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-disabled {
+        color: darkred;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-disabled:hover {
+        background: none;
+        color: darkred;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-disabled:hover::before {
+        background: none;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .rd-container {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .rd-container.rd-container-attachment {
+        background: #000;
+        color: #fff;
+    }
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-back,
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-next,
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-month-label {
+        color: #fff;
+    }
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-back:hover,
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-next:hover {
+        background: transparent;
+    }
+    .rd-container.rd-container-attachment .rd-date .rd-month .rd-back[disabled],
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-next[disabled] {
+        color: transparent;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row {
+        color: #fff;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body:not(.rd-day-selected):hover {
+        color: #fff;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body:not(.rd-day-selected):hover:before {
+        border: 2px solid #fff;
+        background: #c8c8c8;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-selected {
+        border: 2px solid green;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-prev-month,
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-next-month {
+        color: #444;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-disabled {
+        color: darkred;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-disabled:hover {
+        background: none;
+        color: darkred;
+    }
+    .rd-container.rd-container-attachment
+        .rd-date
+        .rd-month
+        .rd-days
+        .rd-days-row
+        .rd-day-body.rd-day-disabled:hover::before {
+        background: none;
+    }
+    .rd-container.rd-container-attachment .rd-time .rd-time-selected {
+        color: #fff;
+    }
+}
+.rd-container {
+    position: absolute;
+    z-index: 99;
+}
+.rd-container.rd-container-attachment {
+    display: grid;
+    grid-gap: 10px;
+    border-radius: 20px;
+}
+.rd-container.rd-container-attachment .rd-date {
+    padding: 10px;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month {
+    display: grid;
+    grid-template-areas: "prev month next" "days days days";
+    grid-row-gap: 10px;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-back,
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-next,
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-month-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    transition: all 0.1s;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-back:hover,
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-next:hover {
+    font-size: 24px;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-month-label {
+    grid-area: month;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-back {
+    grid-area: prev;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-next {
+    grid-area: next;
+}
+.rd-container.rd-container-attachment .rd-date .rd-month .rd-days {
+    grid-area: days;
+}
+.rd-container.rd-container-attachment
+    .rd-date
+    .rd-month
+    .rd-days
+    .rd-days-row
+    .rd-day-body {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+}
+.rd-container.rd-container-attachment
+    .rd-date
+    .rd-month
+    .rd-days
+    .rd-days-row
+    .rd-day-body:not(.rd-day-selected):hover:before {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.rd-container.rd-container-attachment
+    .rd-date
+    .rd-month
+    .rd-days
+    .rd-days-row
+    .rd-day-body.rd-day-disabled {
+    border: none;
+}
+.rd-container.rd-container-attachment
+    .rd-date
+    .rd-month
+    .rd-days
+    .rd-days-row
+    .rd-day-body.rd-day-disabled:hover {
+    border: none;
+}
+.rd-container.rd-container-attachment
+    .rd-date
+    .rd-month
+    .rd-days
+    .rd-days-row
+    .rd-day-body.rd-day-disabled:hover::before {
+    border: none;
+}
+.rd-container.rd-container-attachment .rd-time .rd-time-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 30px;
+}

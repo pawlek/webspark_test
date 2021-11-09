@@ -12,16 +12,21 @@ $(document).ready(function(){
         }
     });
 
-    $('[data-datepicker]').on('click', function(){
-      var datepicker = '#' + $(this).attr('data-datepicker');
-      console.log(datepicker);
-
-      rome(datepicker, { 
-        min: '2021-11-05', 
-        max: '2021-11-25' 
-      });
-
-  });
+    rome(from, {
+      initialValue: today,
+      min: today, 
+      max: '2022-10-30',
+      weekStart: 1,
+      time: false,
+      inputFormat: "DD.MM.YY"
+    });
+    rome(to, { 
+      min: '2021-11-01', 
+      max: '2022-10-30',
+      weekStart: 1,
+      time: false,
+      inputFormat: "DD.MM.YY"
+    });
 
     $('[data-clear]').on('click', function(){
         var clear_input = $(this).attr('data-clear');
