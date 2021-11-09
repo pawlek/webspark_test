@@ -13,17 +13,18 @@
         color: #333;
     }
 }
-svg {
+
+.svg__top {
     position: absolute;
     z-index: 9;
-    &__top {
-        top: 0px;
-        left: 0px;
-    }
-    &__bottom {
-        bottom: 0px;
-        right: 0px;
-    }
+    top: 0px;
+    left: 0px;
+}
+.svg__bottom {
+    position: absolute;
+    z-index: 9;
+    bottom: 0px;
+    right: 0px;
 }
 
 .container {

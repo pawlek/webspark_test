@@ -11,15 +11,16 @@
   color: #333;
 }
 
-svg {
+.svg__top {
   position: absolute;
   z-index: 9;
-}
-svg__top {
   top: 0px;
   left: 0px;
 }
-svg__bottom {
+
+.svg__bottom {
+  position: absolute;
+  z-index: 9;
   bottom: 0px;
   right: 0px;
 }
