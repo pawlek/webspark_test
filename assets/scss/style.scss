@@ -39,8 +39,10 @@ svg.background__svg {
     }
 
     .header {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "block logo inner inner";
+        grid-gap: 20px;
         position: relative;
         z-index: 10;
         background: rgba(255, 255, 255, 0.67);
@@ -48,12 +50,14 @@ svg.background__svg {
             inset 0px 12px 24px rgba(0, 0, 0, 0.12);
 
         .logo {
+            grid-area: logo;
             height: 140px;
             width: 140px;
             position: relative;
             justify-self: end;
         }
         &__inner {
+            grid-area: inner;
             display: grid;
             grid-row-gap: 14px;
 
