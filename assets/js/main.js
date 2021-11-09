@@ -40,7 +40,8 @@ $(document).ready(function(){
       content_inner.append('<div class="item"> <div class="img">  <img src="/assets/img/' + i.toString() + '-unsplash.jpg" alt="unsplash" /> </div>  <div class="data">  <div class="today">  <span class="title">Today</span> <div class="icons"> <div class="likes"> <i class="fas fa-heart"></i> 128 </div> <div class=" comments"> <i class="fas fa-comment-alt"></i> 31 </div> </div>  </div> <div class="last"> <span class="title">09-08-2021</span> <div class="icons"> <div class="likes"> <i class="fas fa-heart"></i> 128 </div> <div class=" comments"> <i class="fas fa-comment-alt"></i> 31 </div> </div> </div> <div class="info"> <span class="title">Image upload</span> 11-04-2021 </div> </div> </div>')
     }
 
-    $('[data-load]').on('click', function(){
+    $('[data-load]').on('click', function(b){
+      b.preventDefault();
 
       var number = 10;
       for (var i = 0; i < number; i++) {
