@@ -7,6 +7,11 @@
     box-sizing: border-box;
     font-family: "Montserrat";
     transition: all 0.3s;
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
 }
 svg.background__svg {
     position: absolute;
@@ -141,6 +146,9 @@ svg.background__svg {
                 &.active {
                     color: #c8c7c7;
                 }
+                &:hover {
+                    font-size: 22px;
+                }
             }
         }
 
@@ -264,6 +272,11 @@ svg.background__svg {
             text-transform: uppercase;
             padding: 10px;
             justify-self: center;
+
+            &:hover {
+                background: #333;
+                color: #fff;
+            }
         }
     }
 }

@@ -6,6 +6,10 @@
   font-family: "Montserrat";
   transition: all 0.3s;
 }
+* a {
+  text-decoration: none;
+  color: #333;
+}
 
 svg.background__svg {
   position: absolute;
@@ -129,6 +133,9 @@ svg.background__svg {
 .container .content .filter .btn.active {
   color: #c8c7c7;
 }
+.container .content .filter .btn:hover {
+  font-size: 22px;
+}
 .container .content__inner {
   display: grid;
   overflow-y: auto;
@@ -234,4 +241,8 @@ svg.background__svg {
   text-transform: uppercase;
   padding: 10px;
   justify-self: center;
+}
+.container .content .load-more:hover {
+  background: #333;
+  color: #fff;
 }
