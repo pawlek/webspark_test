@@ -13,16 +13,16 @@ $(document).ready(function(){
     });
 
     rome(from, {
-      initialValue: rome.moment,
-      min: rome.moment, 
+      initialValue: rome.moment(),
+      min: rome.moment(), 
       max: '2022-10-30',
       weekStart: 1,
       time: false,
       inputFormat: "DD.MM.YY"
     });
     rome(to, { 
-      min: '2021-11-01', 
-      max: '2022-10-30',
+      initialValue: rome.moment(),
+      min: rome.moment(), 
       weekStart: 1,
       time: false,
       inputFormat: "DD.MM.YY"
