@@ -16,7 +16,7 @@ $(document).ready(function(){
       var datepicker = $(this).attr('data-datepicker');
       console.log(datepicker);
 
-      rome(datepicker, { 
+      rome('#' + datepicker, { 
         min: '2021-11-05', 
         max: '2021-11-25' 
       });
