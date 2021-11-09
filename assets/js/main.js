@@ -14,6 +14,7 @@ $(document).ready(function(){
 
     $('[data-datepicker]').on('click', function(){
       var datepicker = $(this).attr('data-datepicker');
+      console.log(datepicker);
 
       rome(datepicker, { 
         min: '2021-11-05', 
